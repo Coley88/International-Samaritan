@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Request Assistance | ISJ Portal</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <aside class="sidebar">
+    <img src="images/isj-logo.png" alt="ISJ Logo" class="sidebar-logo" />
+    <h2>Scholar Portal</h2>
+
+    <a href="scholar-dashboard.html">Dashboard</a>
+    <a href="upload-report.html">Upload Report</a>
+    <a href="request-meeting.html">Request Meeting</a>
+    <a href="request-assistance.html" class="active">Request Assistance</a>
+    <a href="my-profile.html">My Profile</a>
+    <a href="login.html">Logout</a>
+  </aside>
+
+  <main class="dashboard-main">
+    <header class="dashboard-header">
+      <div>
+        <h1>Request Assistance</h1>
+        <p>Ask for support with school-related or personal needs.</p>
+      </div>
+    </header>
+
+    <section class="form-panel">
+      <form onsubmit="submitAssistanceRequest(event)">
+        <label>Type of Assistance</label>
+        <select id="assistanceType" required>
+          <option value="">Select assistance type</option>
+          <option>Book Voucher</option>
+          <option>Transportation Assistance</option>
+          <option>Lunch Support</option>
+          <option>School Supplies</option>
+          <option>Tuition Support</option>
+          <option>Uniform</option>
+          <option>Counselling</option>
+          <option>Tutoring</option>
+          <option>Laptop / Device Support</option>
+          <option>Internet Support</option>
+          <option>Other</option>
+        </select>
+
+        <label>Urgency</label>
+        <select id="assistanceUrgency" required>
+          <option value="">Select urgency</option>
+          <option>Low</option>
+          <option>Medium</option>
+          <option>High</option>
+        </select>
+
+        <label>Reason for Request</label>
+        <textarea
+          id="assistanceReason"
+          placeholder="Explain what you need and why"
+          required
+        ></textarea>
+
+        <button type="submit" class="btn primary">Submit Assistance Request</button>
+      </form>
+    </section>
+
+    <section class="content-panel meeting-history-panel">
+      <div class="panel-top">
+        <div>
+          <h2>My Assistance Requests</h2>
+          <p>View your submitted assistance requests, statuses, and administrator responses.</p>
+        </div>
+
+        <button
+          type="button"
+          class="btn secondary"
+          onclick="loadMyAssistanceRequests()"
+        >
+          Refresh
+        </button>
+      </div>
+
+      <div id="myAssistanceContainer" class="request-grid">
+        <p>Loading your assistance requests...</p>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/app.js"></script>
+
+  <script>
+    loadMyAssistanceRequests();
+   </script>
+</body>

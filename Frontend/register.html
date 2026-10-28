@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Register | ISJ Scholar Portal</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="portal-bg">
+
+  <main class="auth-container">
+    <div class="auth-card wide">
+      <img src="images/isj-logo.png" alt="International Samaritan Jamaica Logo" class="auth-logo" />
+
+      <h1>Create Scholar Account</h1>
+      <p>Register to access the scholarship portal.</p>
+
+      <form onsubmit="registerUser(event)">
+        <div class="form-grid">
+          <div>
+            <label>First Name</label>
+            <input type="text" placeholder="First name" required />
+          </div>
+
+          <div>
+            <label>Last Name</label>
+            <input type="text" placeholder="Last name" required />
+          </div>
+
+          <div>
+            <label>Email Address</label>
+            <input type="email" placeholder="Email address" required />
+          </div>
+
+          <div>
+            <label>Phone Number</label>
+            <input type="tel" placeholder="Phone number" />
+          </div>
+
+          <div>
+            <label>School</label>
+            <input type="text" placeholder="Current school" required />
+          </div>
+
+          <div>
+            <label>Current Grade / Year</label>
+            <input type="text" placeholder="Grade 10, Year 1, etc." required />
+          </div>
+
+          <div>
+            <label>Password</label>
+            <input type="password" placeholder="Create password" required />
+          </div>
+
+          <div>
+            <label>Confirm Password</label>
+            <input type="password" placeholder="Confirm password" required />
+          </div>
+        </div>
+
+        <button type="submit" class="btn primary full">Register</button>
+      </form>
+
+      <p class="small-text">
+        Already have an account?
+        <a href="login.html">Login here</a>
+      </p>
+    </div>
+  </main>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

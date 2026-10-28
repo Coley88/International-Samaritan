@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Dashboard | ISJ Portal</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <aside class="sidebar admin-sidebar">
+    <img src="images/isj-logo.png" alt="ISJ Logo" class="sidebar-logo" />
+    <h2>Admin Portal</h2>
+
+    <a href="admin-dashboard.html" class="active">Dashboard</a>
+    <a href="admin-scholars.html">Scholars</a>
+    <a href="admin-reports.html">Reports</a>
+    <a href="admin-meetings.html">Meetings</a>
+    <a href="admin-assistance.html">Assistance</a>
+    <a href="admin-messages.html">Messages</a>
+    <a href="login.html">Logout</a>
+  </aside>
+
+  <main class="dashboard-main">
+    <header class="dashboard-header">
+      <div>
+        <h1>Administrator Dashboard</h1>
+        <p>Manage scholars, reports, requests, meetings, and communication.</p>
+      </div>
+    </header>
+
+    <section class="stats-grid">
+      <div class="stat-card">
+        <h3>Total Scholars</h3>
+        <p id="totalScholarsStat">...</p>
+      </div>
+
+      <div class="stat-card">
+        <h3>Pending Reports</h3>
+        <p id="pendingReportsStat">...</p>
+      </div>
+
+      <div class="stat-card">
+        <h3>Pending Meetings</h3>
+        <p id="pendingMeetingsStat">...</p>
+      </div>
+
+      <div class="stat-card">
+        <h3>Pending Assistance</h3>
+        <p id="pendingAssistanceStat">...</p>
+      </div>
+    </section>
+
+    <section class="cards-grid">
+      <a href="admin-scholars.html" class="dashboard-card">
+        <h3>View Scholars</h3>
+        <p>Search, filter, and open full scholar profiles.</p>
+      </a>
+
+      <a href="admin-reports.html" class="dashboard-card">
+        <h3>Review Reports</h3>
+        <p>View uploaded school reports, transcripts, and documents.</p>
+      </a>
+
+      <a href="admin-meetings.html" class="dashboard-card">
+        <h3>Meeting Requests</h3>
+        <p>Approve, reschedule, or respond to scholar meeting requests.</p>
+      </a>
+
+      <a href="admin-assistance.html" class="dashboard-card">
+        <h3>Assistance Requests</h3>
+        <p>Manage support requests for books, transport, tutoring, and supplies.</p>
+      </a>
+    </section>
+
+    <section class="content-panel">
+      <h2>Recent Admin Activity</h2>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Scholar</th>
+            <th>Activity</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+
+        <tbody id="adminRecentActivityBody">
+          <tr>
+            <td colspan="4">Loading recent activity...</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="js/app.js"></script>
+
+<script>
+  loadAdminDashboard();
+</script>
+
+</body>
+</html>

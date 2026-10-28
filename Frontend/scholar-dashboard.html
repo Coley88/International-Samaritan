@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Scholar Dashboard | ISJ Portal</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <aside class="sidebar">
+    <img src="images/isj-logo.png" alt="ISJ Logo" class="sidebar-logo" />
+    <h2>Scholar Portal</h2>
+
+    <a href="scholar-dashboard.html" class="active">Dashboard</a>
+    <a href="upload-report.html">Upload Report</a>
+    <a href="request-meeting.html">Request Meeting</a>
+    <a href="request-assistance.html">Request Assistance</a>
+    <a href="my-profile.html">My Profile</a>
+    <a href="login.html">Logout</a>
+  </aside>
+
+  <main class="dashboard-main">
+    <header class="dashboard-header">
+      <div>
+        <h1>Welcome, Scholar</h1>
+        <p>Manage your reports, requests, and scholarship updates.</p>
+      </div>
+    </header>
+
+    <section class="cards-grid">
+      <a href="upload-report.html" class="dashboard-card">
+        <h3>Upload Report</h3>
+        <p>Submit your school report, transcript, or academic document.</p>
+      </a>
+
+      <a href="request-meeting.html" class="dashboard-card">
+        <h3>Request Meeting</h3>
+        <p>Ask to meet with an administrator or mentor.</p>
+      </a>
+
+      <a href="request-assistance.html" class="dashboard-card">
+        <h3>Request Assistance</h3>
+        <p>Request help with books, lunch, transport, tutoring, or supplies.</p>
+      </a>
+
+      <a href="my-profile.html" class="dashboard-card">
+        <h3>My Profile</h3>
+        <p>View your scholar information and current scholarship path.</p>
+      </a>
+    </section>
+
+    <section class="content-panel">
+      <h2>Recent Activity</h2>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Activity</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>May 18, 2026</td>
+            <td>Term Report Uploaded</td>
+            <td><span class="status pending">Pending</span></td>
+          </tr>
+
+          <tr>
+            <td>May 14, 2026</td>
+            <td>Meeting Request Submitted</td>
+            <td><span class="status approved">Approved</span></td>
+          </tr>
+
+          <tr>
+            <td>May 10, 2026</td>
+            <td>Book Voucher Request</td>
+            <td><span class="status completed">Completed</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+</body>
+</html>

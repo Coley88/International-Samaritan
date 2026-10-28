@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login | ISJ Scholar Portal</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="portal-bg">
+
+  <main class="auth-container">
+    <div class="auth-card">
+      <img src="images/isj-logo.png" alt="International Samaritan Jamaica Logo" class="auth-logo" />
+
+      <h1>Welcome Back</h1>
+      <p>Login to access your scholar dashboard.</p>
+
+      <form onsubmit="loginUser(event)">
+        <label>Email Address</label>
+        <input type="email" placeholder="Enter your email" required />
+
+        <label>Password</label>
+        <input type="password" placeholder="Enter your password" required />
+
+        <label>Login As</label>
+        <select required>
+          <option value="">Select role</option>
+          <option value="scholar">Scholar</option>
+          <option value="admin">Administrator</option>
+        </select>
+
+        <button type="submit" class="btn primary full">Login</button>
+      </form>
+
+      <p class="small-text">
+        Do not have an account?
+        <a href="register.html">Register here</a>
+      </p>
+    </div>
+  </main>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

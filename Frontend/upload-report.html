@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Upload Report | ISJ Portal</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <aside class="sidebar">
+    <img src="images/isj-logo.png" alt="ISJ Logo" class="sidebar-logo" />
+    <h2>Scholar Portal</h2>
+
+    <a href="scholar-dashboard.html">Dashboard</a>
+    <a href="upload-report.html" class="active">Upload Report</a>
+    <a href="request-meeting.html">Request Meeting</a>
+    <a href="request-assistance.html">Request Assistance</a>
+    <a href="my-profile.html">My Profile</a>
+    <a href="login.html">Logout</a>
+  </aside>
+
+  <main class="dashboard-main">
+    <header class="dashboard-header">
+      <div>
+        <h1>Upload Report</h1>
+        <p>Submit your academic report, transcript, or school document.</p>
+      </div>
+    </header>
+
+    <section class="form-panel">
+        <form onsubmit="submitReportUpload(event)">
+          <label>Report Type</label>
+          <select id="reportType" required>
+            <option value="">Select report type</option>
+            <option>Term Report</option>
+            <option>Semester Report</option>
+            <option>Transcript</option>
+            <option>Progress Letter</option>
+            <option>Other</option>
+          </select>
+
+          <label>School Year</label>
+          <input
+            type="text"
+            id="reportSchoolYear"
+            placeholder="Example: 2025/2026"
+            required
+          />
+
+          <label>Term / Semester</label>
+          <select id="reportTerm" required>
+            <option value="">Select term or semester</option>
+            <option>Term 1</option>
+            <option>Term 2</option>
+            <option>Term 3</option>
+            <option>Semester 1</option>
+            <option>Semester 2</option>
+          </select>
+
+          <label>Upload File</label>
+          <input
+            type="file"
+            id="reportFile"
+            accept=".pdf,.doc,.docx,.jpg,.jpeg,.png"
+            required
+          />
+
+          <label>Comment</label>
+          <textarea
+            id="reportComment"
+            placeholder="Write a short note about this report"
+          ></textarea>
+
+          <button type="submit" class="btn primary">Submit Report</button>
+        </form>
+      </section>
+
+      <section class="content-panel meeting-history-panel">
+        <div class="panel-top">
+          <div>
+            <h2>My Uploaded Reports</h2>
+            <p>View reports you have submitted and their review status.</p>
+          </div>
+
+          <button
+            type="button"
+            class="btn secondary"
+            onclick="loadMyReports()"
+          >
+            Refresh
+          </button>
+        </div>
+
+        <div id="myReportsContainer" class="request-grid">
+          <p>Loading your reports...</p>
+        </div>
+     </section>
+  </main>
+
+  <script src="js/app.js"></script>
+
+<script>
+  loadMyReports();
+</script>
+</body>
+</html>

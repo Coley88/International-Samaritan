@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Request Meeting | ISJ Portal</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <aside class="sidebar">
+    <img src="images/isj-logo.png" alt="ISJ Logo" class="sidebar-logo" />
+    <h2>Scholar Portal</h2>
+
+    <a href="scholar-dashboard.html">Dashboard</a>
+    <a href="upload-report.html">Upload Report</a>
+    <a href="request-meeting.html" class="active">Request Meeting</a>
+    <a href="request-assistance.html">Request Assistance</a>
+    <a href="my-profile.html">My Profile</a>
+    <a href="login.html">Logout</a>
+  </aside>
+
+  <main class="dashboard-main">
+    <header class="dashboard-header">
+      <div>
+        <h1>Request a Meeting</h1>
+        <p>Schedule time to speak with an administrator or mentor.</p>
+      </div>
+    </header>
+
+     <section class="form-panel">
+       <form onsubmit="submitMeetingRequest(event)">
+      <label for="meetingReason">Reason for Meeting</label>
+      <select id="meetingReason" name="meetingReason" required>
+         <option value="">Select reason</option>
+         <option>Academic Concern</option>
+         <option>Family Issue</option>
+         <option>Financial Assistance</option>
+         <option>Mentorship</option>
+         <option>Career Guidance</option>
+         <option>Personal Support</option>
+         <option>Other</option>
+       </select>
+
+       <label for="meetingDate">Preferred Date</label>
+       <input type="date" id="meetingDate" title="Preferred date" placeholder="Select a date" required />
+
+       <label for="meetingTime">Preferred Time</label>
+       <input type="time" id="meetingTime" title="Preferred time" placeholder="Select a time" required />
+
+      <label>Message</label>
+      <textarea id="meetingMessage" placeholder="Briefly explain why you would like to meet" required></textarea>
+
+      <button type="submit" class="btn primary">Submit Meeting Request</button>
+     </form>
+   </section>
+  </main>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

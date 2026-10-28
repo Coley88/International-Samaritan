@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Assistance Requests | ISJ Admin Portal</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <aside class="sidebar admin-sidebar">
+    <img src="images/isj-logo.png" alt="ISJ Logo" class="sidebar-logo" />
+    <h2>Admin Portal</h2>
+
+    <a href="admin-dashboard.html">Dashboard</a>
+    <a href="admin-scholars.html">Scholars</a>
+    <a href="admin-reports.html">Reports</a>
+    <a href="admin-meetings.html">Meetings</a>
+    <a href="admin-assistance.html" class="active">Assistance</a>
+    <a href="admin-messages.html">Messages</a>
+    <a href="login.html">Logout</a>
+  </aside>
+
+  <main class="dashboard-main">
+    <header class="dashboard-header">
+      <div>
+        <h1>Assistance Requests</h1>
+        <p>Manage support requests from scholars.</p>
+      </div>
+    </header>
+
+    <section class="content-panel">
+      <div class="panel-top">
+       <h2>Submitted Assistance Requests</h2>
+
+       <select id="assistanceStatusFilter" class="filter-box" onchange="loadAdminAssistanceRequests()">
+        <option value="All">All Requests</option>
+        <option value="Pending">Pending</option>
+        <option value="Approved">Approved</option>
+        <option value="Denied">Denied</option>
+        <option value="Need More Information">Need More Information</option>
+        <option value="Completed">Completed</option>
+       </select>
+      </div>
+
+  <div id="adminAssistanceContainer" class="request-grid">
+    <p>Loading assistance requests...</p>
+  </div>
+</section>
+
+
+  </main>
+
+  <script src="js/app.js"></script>
+
+<script>
+  loadAdminAssistanceRequests();
+</script>
+
+</body>
+</html>

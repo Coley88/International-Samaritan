@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meeting Requests | ISJ Admin Portal</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <aside class="sidebar admin-sidebar">
+    <img src="images/isj-logo.png" alt="ISJ Logo" class="sidebar-logo" />
+    <h2>Admin Portal</h2>
+
+    <a href="admin-dashboard.html">Dashboard</a>
+    <a href="admin-scholars.html">Scholars</a>
+    <a href="admin-reports.html">Reports</a>
+    <a href="admin-meetings.html" class="active">Meetings</a>
+    <a href="admin-assistance.html">Assistance</a>
+    <a href="admin-messages.html">Messages</a>
+    <a href="login.html">Logout</a>
+  </aside>
+
+  <main class="dashboard-main">
+    <header class="dashboard-header">
+      <div>
+        <h1>Meeting Requests</h1>
+        <p>Approve, reschedule, or respond to scholar meeting requests.</p>
+      </div>
+    </header>
+
+   <section class="content-panel">
+     <div class="panel-top">
+       <h2>Submitted Meeting Requests</h2>
+
+       <select id="meetingStatusFilter" class="filter-box" aria-label="Filter meeting requests by status" onchange="loadAdminMeetings()">
+         <option value="All">All Requests</option>
+         <option value="Pending">Pending</option>
+         <option value="Approved">Approved</option>
+         <option value="Rescheduled">Rescheduled</option>
+         <option value="Declined">Declined</option>
+         <option value="Completed">Completed</option>
+       </select>
+     </div>
+
+     <div id="adminMeetingsContainer" class="request-grid">
+       <p>Loading meeting requests...</p>
+     </div>
+   </section>
+  </main>
+
+  <script src="js/app.js"></script>
+  <script>
+   loadAdminMeetings();
+  </script>
+</body>
+</html>

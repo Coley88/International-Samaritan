@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Scholar Details | ISJ Admin Portal</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <aside class="sidebar admin-sidebar">
+    <img src="images/isj-logo.png" alt="ISJ Logo" class="sidebar-logo" />
+    <h2>Admin Portal</h2>
+
+    <a href="admin-dashboard.html">Dashboard</a>
+    <a href="admin-scholars.html" class="active">Scholars</a>
+    <a href="admin-reports.html">Reports</a>
+    <a href="admin-meetings.html">Meetings</a>
+    <a href="admin-assistance.html">Assistance</a>
+    <a href="admin-messages.html">Messages</a>
+    <a href="login.html">Logout</a>
+  </aside>
+
+  <main class="dashboard-main">
+  <header class="dashboard-header">
+    <div>
+      <h1>Scholar Profile</h1>
+      <p>Full scholar information, history, reports, requests, and admin notes.</p>
+    </div>
+  </header>
+
+  <section class="profile-layout">
+    <div class="profile-card">
+      <div class="profile-photo" id="adminScholarPhoto">Photo</div>
+
+      <h2 id="adminScholarName">Loading...</h2>
+      <p>Current Path: <span id="adminScholarPath">Loading...</span></p>
+
+      <div class="profile-actions">
+        <a href="admin-messages.html" class="btn primary full">Message Scholar</a>
+        <a href="admin-scholars.html" class="btn secondary full">Back to Scholars</a>
+      </div>
+    </div>
+
+    <div class="profile-details">
+      <h2>Personal Information</h2>
+
+      <div class="detail-grid">
+        <div>
+          <strong>Full Name</strong>
+          <p id="detailFullName">Loading...</p>
+        </div>
+
+        <div>
+          <strong>Email</strong>
+          <p id="detailEmail">Loading...</p>
+        </div>
+
+        <div>
+          <strong>Age</strong>
+          <p id="detailAge">Loading...</p>
+        </div>
+
+        <div>
+          <strong>Phone</strong>
+          <p id="detailPhone">Loading...</p>
+        </div>
+
+        <div>
+          <strong>School</strong>
+          <p id="detailSchool">Loading...</p>
+        </div>
+
+        <div>
+          <strong>Current Grade / Year</strong>
+          <p id="detailGrade">Loading...</p>
+        </div>
+
+        <div>
+          <strong>Years on Scholarship</strong>
+          <p id="detailYears">Loading...</p>
+        </div>
+
+        <div>
+          <strong>Current Path</strong>
+          <p id="detailPath">Loading...</p>
+        </div>
+      </div>
+
+      <h2>Family Information</h2>
+      <p id="detailFamilyInfo">Loading...</p>
+    </div>
+  </section>
+
+  <section class="content-panel detail-section">
+    <h2>Uploaded Reports</h2>
+    <div id="scholarReportsContainer" class="request-grid">
+      <p>Loading reports...</p>
+    </div>
+  </section>
+
+  <section class="content-panel detail-section">
+    <h2>Meeting Requests</h2>
+    <div id="scholarMeetingsContainer" class="request-grid">
+      <p>Loading meeting requests...</p>
+    </div>
+  </section>
+
+  <section class="content-panel detail-section">
+    <h2>Assistance Requests</h2>
+    <div id="scholarAssistanceContainer" class="request-grid">
+      <p>Loading assistance requests...</p>
+    </div>
+  </section>
+
+  <section class="content-panel detail-section">
+    <h2>Admin Notes</h2>
+
+    <form onsubmit="addAdminNote(event)" class="note-form">
+      <textarea
+        id="adminNoteInput"
+        placeholder="Write a private admin note for this scholar..."
+        required
+      ></textarea>
+
+      <button type="submit" class="btn primary">Save Note</button>
+    </form>
+
+    <div id="adminNotesContainer" class="notes-list">
+      <p>Loading notes...</p>
+    </div>
+  </section>
+</main>
+
+  <script src="js/app.js"></script>
+
+  <script>
+    loadScholarDetails();
+  </script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Profile | ISJ Portal</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <aside class="sidebar">
+    <img src="images/isj-logo.png" alt="ISJ Logo" class="sidebar-logo" />
+    <h2>Scholar Portal</h2>
+
+    <a href="scholar-dashboard.html">Dashboard</a>
+    <a href="upload-report.html">Upload Report</a>
+    <a href="request-meeting.html">Request Meeting</a>
+    <a href="request-assistance.html">Request Assistance</a>
+    <a href="my-profile.html" class="active">My Profile</a>
+    <a href="login.html">Logout</a>
+  </aside>
+
+  <main class="dashboard-main">
+    <header class="dashboard-header">
+      <div>
+        <h1>My Scholar Profile</h1>
+        <p>View your scholarship information and current progress.</p>
+      </div>
+    </header>
+
+    <section class="profile-layout">
+    <div class="profile-card">
+    <div class="profile-photo" id="profilePhoto">Photo</div>
+    <h2 id="profileCardName">Loading...</h2>
+    <p>Current Path: <span id="profileCardPath">Loading...</span></p>
+    </div>
+
+    <div class="profile-details">
+    <h2>Personal Information</h2>
+
+    <div class="detail-grid">
+      <div>
+        <strong>Full Name</strong>
+        <p id="profileFullName">Loading...</p>
+      </div>
+
+      <div>
+        <strong>Age</strong>
+        <p id="profileAge">Loading...</p>
+      </div>
+
+      <div>
+        <strong>Email</strong>
+        <p id="profileEmail">Loading...</p>
+      </div>
+
+      <div>
+        <strong>Phone</strong>
+        <p id="profilePhone">Loading...</p>
+      </div>
+
+      <div>
+        <strong>School</strong>
+        <p id="profileSchool">Loading...</p>
+      </div>
+
+      <div>
+        <strong>Current Grade / Year</strong>
+        <p id="profileGrade">Loading...</p>
+      </div>
+
+      <div>
+        <strong>Years on Scholarship</strong>
+        <p id="profileYears">Loading...</p>
+      </div>
+
+      <div>
+        <strong>Current Path</strong>
+        <p id="profilePath">Loading...</p>
+      </div>
+    </div>
+
+    <h2>Family Information</h2>
+    <p id="profileFamilyInfo">Loading...</p>
+
+    <h2>Scholarship Timeline</h2>
+    <ul class="timeline">
+      <li><strong>Profile:</strong> Scholar information loaded from database.</li>
+      <li><strong>Status:</strong> Scholarship history will be updated by administrators.</li>
+    </ul>
+  </div>
+ </section>
+  </main>
+
+  <script src="js/app.js"></script>
+<script>
+  loadMyProfile();
+</script>
+</body>
+</html>
